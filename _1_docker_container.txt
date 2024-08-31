@@ -37,17 +37,30 @@ docker container ls (çalışan containerları görüyoruz)
 docker container ls -a (hem çalışmakta hem durdurulmuş containerlarımızı görürüz)
 
 
+-- START
+docker container run -p 90:80 -d --name nginx_my10 nginx
+docker container stop <CONTAINER_ID>
+docker container start <CONTAINER_ID>
+docker container start <CONTAINER_NAME>
+
+
 -- STOP 
 docker container stop <CONTAINER_ID>
 docker container stop <CONTAINER_NAME>
 
 -- DELETE
-docker container rm <CONTAINER_ID> (container silindi)
+docker container stop <CONTAINER_ID>
+docker container rm <CONTAINER_ID> (container silindi) -> container stop durumunda olmadan silinemez.
 docker container rm <CONTAINER_NAME>
+
+-- DELETE FORCE
+docker container rm -f <CONTAINER_ID> (container stop durumunda olmasa bile silinir)
+docker container rm -f <CONTAINER_NAME>
 
 
 -- PRUNE 
 docker container prune -y (kullanılmayan containerlar silinir)
+
 
 
 
