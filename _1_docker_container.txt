@@ -27,6 +27,29 @@ docker container run --publish 82:80 --detach --name nginx_my1 nginx
 -aynı porta farklı isim vererek kullanamıyoruz
 -aynı ismi farklı portlarda kullanamıyoruz
 docker container run --publish 84:80 --detach --name nginx_my4 --rm nginx (kapattığımız an kapansın işlemi)
+docker container run --publish 85:80 --detach --name nginx_my5 --rm nginx:latest
+docker container run --publish 86:80 --detach --name nginx_my6 --rm nginx:1.14 (istediğimiz sürümü alabiliyoruz)
+docker container run -p 8888:80 -d --name nginx_my8 --rm nginx
+
+-- LIST (CONTAINER)
+docker ps (containerlarımızı gösteriyor)
+docker container ls (çalışan containerları görüyoruz)
+docker container ls -a (hem çalışmakta hem durdurulmuş containerlarımızı görürüz)
+
+
+-- STOP 
+docker container stop <CONTAINER_ID>
+docker container stop <CONTAINER_NAME>
+
+-- DELETE
+docker container rm <CONTAINER_ID> (container silindi)
+docker container rm <CONTAINER_NAME>
+
+
+-- PRUNE 
+docker container prune -y (kullanılmayan containerlar silinir)
+
+
 
 docker container --help
 
