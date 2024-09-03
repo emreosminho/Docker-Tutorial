@@ -1,0 +1,35 @@
+# FROM: çalıştıracağımız image'i gösterir
+# Image olarak Ubuntu kullanıyorum
+FROM python:3.9-slim
+
+# LABEL: bilgilendirme
+LABEL maintainer="emreosmancanakci@gmail.com"
+
+# ENV: ortam değişkenlerim
+ENV APP_NAME="ubuntu, Dockerfile"
+ENV VERSION="v1.0.0"
+ENV PORT="2222"
+
+# VOLUME: Kalıcılık
+VOLUME /tmp
+
+# WORKDIR: ÇALIŞMA DİZİNİ
+# Uygulama için dosya yolu dizini oluşturur.
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
+COPY . .
+
+
+
+# Uygulama portunu expose edelim
+EXPOSE 3333
+
+# Uygulama başlatma komutu
+CMD [ "python3", "app.py" ]
+
+
+# docker build -f DockerfilePython3 -t python_project .
+# docker container run --name pythonData -d -p 4444:3333 python_project

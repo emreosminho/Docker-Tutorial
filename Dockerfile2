@@ -1,0 +1,30 @@
+# FROM: çalıştıracağımız image'i gösterir
+# Image olarak Ubuntu kullanıyorum
+FROM ubuntu:latest
+
+# LABEL: bilgilendirme
+LABEL maintainer="emreosmancanakci@gmail.com"
+
+# ENV: ortam değişkenlerim
+ENV APP_NAME="ubuntu, Dockerfile"
+ENV VERSION="v1.0.0"
+ENV PORT="2222"
+
+# VOLUME: Kalıcılık
+VOLUME /tmp
+
+# WORKDIR: ÇALIŞMA DİZİNİ
+# Uygulama için dosya yolu dizini oluşturur.
+WORKDIR /usr/src/app
+
+# RUN: image için gerekli yüklemeler ve bağımlılıklar
+RUN apt-get update && apt-get install -y python3 python3-pip
+
+# Flask kurulumu
+RUN pip3 install flask
+
+# Uygulama portunu expose edelim
+EXPOSE 2222
+
+# Uygulama başlatma komutu
+CMD [ "python3", "app.py" ]
