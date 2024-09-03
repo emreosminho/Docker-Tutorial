@@ -1,5 +1,33 @@
+# Dockerfile: Kendi image dosyalarımı oluşturmak için
+
+# FROM: Çalıştıracağımız image gösterir
+# image olarak Node.js kullandık
+# WORKDIR: Çalışma dizini
+# Uygulama için dosya yolu dizini olusturur
+# COPY: Image kopyalamak için kullanırız
+# package.json dosyalarını kopyala
+# RUN: Image için gerekli yüklemeleri
+# Bağımlılıkları yükle
+# Uygulamada kodları kopyala
+# EXPOSE: Port numarası
+# CMD: Gerekli yüklemeler olduktan sonra çalışmasını isteyeceğimiz komutlar
+# Uygulamayı başlat
+# LABEL: Bilgilendirmek
+# USER: Kullanıcıları gösterir USER poweruser
+# ADD: Ekleme
+# ENTRYPOINT: Çalıştıralacak komut yolunu gösterir
+# ENV: Ortam değişkenleri
+# VOLUME: Kalıcılık(Persist)
+# HEALTHCHECK: Konteyner çalışıp çalışmadığının cevabını alırız
+
+###############################################################
+###############################################################
+
 # Dockerfile çalıştırma
-docker build .
+# docker build .
 
 # Dockerfile özel bir isimle vermişsek
-docker build -t special_dockerfile_name .
+# docker build -t ilk-projem .
+
+# docker ps 
+# docker run -d -p 8080:80 --name ilk-container ilk-projem
