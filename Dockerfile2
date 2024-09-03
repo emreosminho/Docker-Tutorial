@@ -28,3 +28,6 @@ EXPOSE 2222
 
 # Uygulama başlatma komutu
 CMD [ "python3", "app.py" ]
+
+
+# Aynı işlemlerin benzerini ubuntu kurulumunda gerçekleştirdik.
