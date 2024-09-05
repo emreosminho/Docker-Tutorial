@@ -1,0 +1,21 @@
+docker login
+username
+password
+
+----------------------------------------------
+
+
+Dockerhub => Repository olustur
+docker push emreosminho/my_html_p:tagname
+
+
+----------------------------------------------
+
+Dockerfile ile kendi image'i oluştur.
+Image Name : html_p
+docker image tag <IMAGE_NAME> <DOCKERHUB_REPOSITORY>
+
+
+docker image tag html_p:latest emreosminho/my_html_p
+docker push emreosminho/my_html_p
+

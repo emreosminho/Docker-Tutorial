@@ -1,0 +1,14 @@
+# Nginx image'ını kullanarak basit bir web sunucusu kuruyoruz
+FROM nginx:latest
+
+# Projeyi kopyalıyoruz
+COPY index.html /usr/share/nginx/html/
+
+EXPOSE 80
+
+
+
+
+
+# docker build -f DockerfileHtml -t html_p .
+# docker container run --name htmlData -d -p 80:80 html_p
