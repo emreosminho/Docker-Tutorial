@@ -19,3 +19,7 @@ docker image tag <IMAGE_NAME> <DOCKERHUB_REPOSITORY>
 docker image tag html_p:latest emreosminho/my_html_p
 docker push emreosminho/my_html_p
 
+
+
+docker pull emreosminho/my_html_p
+docker container run -d -p 80:80 --name my_docker_hub_image emreosminho/my_html_p
