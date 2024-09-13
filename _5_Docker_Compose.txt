@@ -23,7 +23,8 @@ Açıklama: İmajlar oluşturulur veya yeniden oluşturulur.
 docker-compose.yml dosyasında tanımlı olan imajları Docker Hub’dan çeker (indirir).
 Komut: docker-compose pull
 Açıklama: Herhangi bir build işlemi gerçekleştirmeden belirtilen imajları indirir.
-docker-compose logs
+
+5--docker-compose logs
 
 Çalışan servislerin loglarını görüntülemek için kullanılır.
 Komut: docker-compose logs
@@ -33,18 +34,21 @@ docker-compose stop
 Çalışan Docker Compose servislerini durdurmak için kullanılır.
 Komut: docker-compose stop
 Açıklama: Tüm çalışan servisleri durdurur, ancak konteynerler silinmez.
-docker-compose restart
+
+6--docker-compose restart
 
 Docker Compose servislerini yeniden başlatmak için kullanılır.
 Komut: docker-compose restart
 Açıklama: Tüm servisleri durdurur ve tekrar başlatır.
-docker-compose exec
+
+7--docker-compose exec
 
 Bir serviste çalışan konteynerde komut yürütmek için kullanılır.
 Komut: docker-compose exec [service_name] [command]
 Açıklama: Belirli bir servisin konteynerinde bir komut yürütür.
 Örnek: docker-compose exec web bash
-docker-compose ps
+
+8--docker-compose ps
 
 Çalışan servislerin durumunu görmek için kullanılır.
 Komut: docker-compose ps
