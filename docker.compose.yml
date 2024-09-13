@@ -7,3 +7,7 @@ services:
       - "8080:80"
     volumes:
       - ./index.html:/usr/share/nginx/html/index.html
+
+
+# volumes kısmında html-data adında bir volume tanımlandı. 
+# Bu volume, konteynerdeki /usr/share/nginx/html diziniyle eşleştiriliyor.
