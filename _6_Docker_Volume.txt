@@ -15,18 +15,18 @@ Var olan volume'ları listelemek için docker volume ls komutu kullanılır.
 Bir volume'un detaylarını görmek için docker volume inspect komutu kullanılır.
 Örnek: docker volume inspect my_volume Bu komut "my_volume" isimli volume'un bilgilerini detaylı olarak gösterir.
 
-Volume'u Bir Container'a Bağlama (Mount)
+**Volume'u Bir Container'a Bağlama (Mount)
 
-**Bir volume'u container'a bağlamak için -v ya da --mount parametreleri kullanılır.
+Bir volume'u container'a bağlamak için -v ya da --mount parametreleri kullanılır.
 Örnek: docker run -d -v my_volume:/app/data nginx Bu komut, "my_volume" volume'unu /app/data dizinine bağlayarak bir Nginx container'ı başlatır.
 
-Volume Silme (Remove)
+**Volume Silme (Remove)
 
-**Bir volume'u silmek için docker volume rm komutu kullanılır.
+Bir volume'u silmek için docker volume rm komutu kullanılır.
 Örnek: docker volume rm my_volume Bu komut, "my_volume" isimli volume'u siler.
 
-Kullanılmayan Volume'ları Temizleme (Prune)
+**Kullanılmayan Volume'ları Temizleme (Prune)
 
-**Kullanılmayan volume'ları topluca silmek için docker volume prune komutu kullanılır.
+Kullanılmayan volume'ları topluca silmek için docker volume prune komutu kullanılır.
 Örnek: docker volume prune Bu komut, artık kullanılmayan tüm volume'ları temizler.
 Docker volume'ları, verilerin container'lar arasında paylaşılmasını ve container'lar silinse bile verilerin korunmasını sağlar.
